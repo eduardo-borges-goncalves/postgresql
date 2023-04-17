@@ -1,0 +1,1 @@
+-- SELECT * FROM person WHERE name like 'B%';

@@ -1,0 +1,81 @@
+-- insert into
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- values
+--   (
+--     'Bobbie Rubens',
+--     '2022/04/18',
+--     'brubens0car@loc.gov',
+--     'Female',
+--     'China',
+--     '1847650939',
+--     1
+--   );
+-- insert into
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- values
+--   (
+--     'Roy Crickmer',
+--     '2022/10/02',
+--     null,
+--     'Male',
+--     'France',
+--     '1715833438',
+--     2
+--   );
+--------------- * --------------------
+-- person are the left table
+-- car are the right table
+-- JOIN take just the union between person and car
+--  descobri que se eu quero usar o count pra contar a ocorrência de algo, eu sou OBRIGADO
+-- a usar o GROUP BY, e mais, preciso colocar todas as colunas que eu quero mostrar, nome, 
+-- email, make, etc, no GROUP BY
+-- SELECT
+--   name,
+--   email,
+--   make,
+--   count(price)
+-- FROM
+--   person
+--   JOIN car ON car_id = car.id
+--   AND price > 1
+-- GROUP BY
+--   name,
+--   email,
+--   make;
+
+-- SELECT
+--   name,
+--   count(price)
+-- FROM
+--   person
+--   JOIN car ON car_id = car.id
+--   AND price > 1
+-- GROUP BY
+--   name;
+
+-- LEFT JOIN take everithing from person and take just the 
+-- cars that are owned by a person
+-- SELECT
+--   *
+-- FROM
+--   person
+--   LEFT JOIN car ON car_id = car.id;
+
+Select person.name from person 
+ inner join car as B where person.car_id = B.id GROUP BY person.Name;

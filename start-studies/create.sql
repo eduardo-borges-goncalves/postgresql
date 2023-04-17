@@ -1,0 +1,7 @@
+-- CREATE TABLE car (
+--   id bigserial PRIMARY KEY NOT NULL,
+--   make varchar(50) NOT NULL,
+--   model varchar(50) NOT NULL,
+--   price decimal(10, 2) NOT NULL,
+--   UNIQUE(model, make)
+-- );

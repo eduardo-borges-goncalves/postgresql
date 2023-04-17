@@ -1,0 +1,206 @@
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Bobbie Rubens',
+--     '2022/04/18',
+--     'brubensf0@loc.gov',
+--     'Female',
+--     'China',
+--     '18476590937',
+--     1
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Roy Crickmer',
+--     '2022/10/02',
+--     NULL,
+--     'Male',
+--     'France',
+--     '17195833430',
+--     2
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Fanny Tomovic',
+--     '2023/01/31',
+--     NULL,
+--     'Female',
+--     'Brazil',
+--     '48579121344',
+--     2
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Maurine McGuane',
+--     '2022/11/04',
+--     'mmcgufane3@jalbum.net',
+--     'Female',
+--     'Philippines',
+--     '65692129478',
+--     5
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Alejandrina Lohan',
+--     '2023/02/09',
+--     NULL,
+--     'Female',
+--     'Poland',
+--     '25089391918', 4
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Hendrika Kenningley',
+--     '2022/06/02',
+--     NULL,
+--     'Female',
+--     'Thailand',
+--     '54279896422',4
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Ham Nanni',
+--     '2022/09/28',
+--     'hnanni6f@ocn.ne.jp',
+--     'Male',
+--     'Sweden',
+--     '61479629388',1
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Aubrey Sey',
+--     '2022/04/15',
+--     'asey7@lfiveinternet.ru',
+--     'Female',
+--     'French Polynesia',
+--     '50550691359',5
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Toma Langstaff',
+--     '2022/09/26',
+--     NULL,
+--     'Female',
+--     'Portugal',
+--     '85365920906',2
+--   );
+-- INSERT INTO
+--   person (
+--     name,
+--     date_of_birth,
+--     email,
+--     gender,
+--     country_of_birth,
+--     cpf,
+--     car_id
+--   )
+-- VALUES
+--   (
+--     'Georg Wilber',
+--     '2022/04/08',
+--     NULL,
+--     'Male',
+--     'Argentina',
+--     '42421974187',4
+--   );
+
+SELECT
+  model,
+  count(person.car_id)
+FROM car
+   JOIN person 
+   ON car.id = person.car_id
+   GROUP BY model;
+
+  -- SELECT firstName, count(books.book_author) from authors
+  --  join books
+  --   on  books.book_author = authors.author_id;
